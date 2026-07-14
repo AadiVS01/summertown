@@ -21,8 +21,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "french toast",
-  description: "The Artisan Bakery & Café",
+  title: "Summertown Cafe",
+  description: "Summertown Resto Cafe",
 };
 
 export default function RootLayout({

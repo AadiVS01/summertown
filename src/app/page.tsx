@@ -25,44 +25,26 @@ export default function Home() {
     <div className="w-full">
       <header className="relative border-b-floating pt-[4vw] pb-[3vw] px-[2.4rem] text-center overflow-hidden" id="home">
         <BlockReveal>
-          <h1 className="whitespace-nowrap font-sans font-black text-[clamp(2.5rem,11.5vw,11rem)] leading-[0.9] tracking-[-0.05em] text-brand-ink lowercase flex items-center justify-center pt-[0.6em]">
-            <span>french toas</span>
-            <span className="relative inline-block">
-              {/* Stacked Toast Icon matching storefront sign perfectly */}
-              <span className="absolute bottom-[90%] left-1/2 -translate-x-[40%] flex items-center justify-center z-10 pointer-events-none w-[0.8em] h-[0.8em]">
-                
-                {/* BACK TOAST (Left) */}
-                <div className="absolute left-[0.1em] top-[0.1em] -rotate-[22deg] w-[0.45em] h-[0.45em]">
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full text-[#b28a68] drop-shadow-md">
-                    <path d="M18 5C17.5 5 16 3 12 3C8 3 6.5 5 6 5C4 5 4 7 4 8v10c0 1.5 1.5 3 3 3h10c1.5 0 3-1.5 3-3V8c0-1 0-3-2-3z" />
-                  </svg>
-                </div>
-
-                {/* FRONT TOAST (Right) */}
-                <div className="absolute right-[0.1em] top-[0.2em] rotate-[12deg] w-[0.45em] h-[0.45em]">
-                  {/* Dark crust edge / 3D shadow */}
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="absolute -left-[0.06em] -top-[0.01em] w-full h-full text-[#38413a]">
-                    <path d="M18 5C17.5 5 16 3 12 3C8 3 6.5 5 6 5C4 5 4 7 4 8v10c0 1.5 1.5 3 3 3h10c1.5 0 3-1.5 3-3V8c0-1 0-3-2-3z" />
-                  </svg>
-                  
-                  {/* Front Toast body */}
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="relative z-10 w-full h-full text-[#dbb57d]">
-                    <path d="M18 5C17.5 5 16 3 12 3C8 3 6.5 5 6 5C4 5 4 7 4 8v10c0 1.5 1.5 3 3 3h10c1.5 0 3-1.5 3-3V8c0-1 0-3-2-3z" />
-                  </svg>
-                </div>
-                
+          <img src="/summertowncafe.svg" alt="Summertown Cafe Logo" className="mx-auto w-[160px] md:w-[220px] h-auto mb-[1rem] scale-150" />
+          <h1 className="whitespace-nowrap font-sans font-bold text-[clamp(1.8rem,7vw,6.5rem)] leading-[1] tracking-[0.1em] text-brand-ink uppercase flex items-center justify-center pt-[0.4em]">
+            <span className="mr-[0.4em]">SUMMER</span>
+            <span>
+              T
+              <span className="relative inline-block mx-[0.04em]">
+                <span className="absolute bottom-[0.14em] left-1/2 -translate-x-1/2 w-[0.55em] h-[0.11em] bg-brand-ink"></span>
+                <span className="relative text-[0.65em] -top-[0.24em]">O</span>
               </span>
-              t
+              WN
             </span>
           </h1>
         </BlockReveal>
         <BlockReveal delay={0.2}>
-          <div className="mt-[1vw] font-sans font-bold text-[clamp(0.7rem,3vw,2rem)] tracking-[0.4em] uppercase text-brand-ink opacity-90">
-            BAKERY & KITCHEN
+          <div className="mt-[0.5vw] font-serif font-medium text-[clamp(1rem,3.5vw,2.5rem)] tracking-[0.3em] uppercase text-brand-ink opacity-95">
+            RESTO CAFE
           </div>
         </BlockReveal>
         <TextReveal delay={0.2} className="max-w-[520px] mx-auto mt-[1.6rem] font-serif italic text-brand-ink-soft text-[1.02rem] leading-[1.55]">
-          Experience our cozy, charming, and aesthetically pleasing European-style café. The perfect laid-back spot for deep conversations, dates, and solo coffee time across Kochi.
+          Experience our vintage aesthetic and cozy, charming European-style atmosphere. The perfect laid-back spot for deep conversations, casual hangouts, and premium continental dining in Kochi.
         </TextReveal>
         <div className="mt-[2.6rem] mx-auto max-w-[920px] overflow-hidden border-2 border-brand-line relative bg-brand-cream-2/50">
           <img src="/hero.png?v=1" alt="French Toast Bakery & Kitchen" className="w-full h-auto block" />
@@ -72,7 +54,7 @@ export default function Home() {
       {/* Marquee Row */}
       <div className="border-b-floating overflow-hidden whitespace-nowrap py-[0.4rem]">
         <div className="inline-flex items-center animate-marquee">
-          {Array(8).fill("Burnt Basque Cheesecake • Strawberry & Banoffee Toast • Tuna Olive Sourdough").map((item, i) => (
+          {Array(8).fill("Cheesy BBQ Chicken Pizza • Grilled Chicken Caesar Salad • Handcrafted Coffee").map((item, i) => (
             <span key={i} className="font-serif italic font-medium text-[1.05rem] text-brand-red px-[1.4rem] inline-flex items-center gap-[1.4rem] after:content-['✦'] after:text-[0.7rem] after:opacity-70">
               {item}
             </span>
@@ -82,18 +64,18 @@ export default function Home() {
 
       <section className="grid grid-cols-1 md:grid-cols-2 border-b-floating" id="menu">
         <div className="p-[1.5rem_1rem] md:p-[2.5rem_2rem] border-b-floating md:border-b-0-floating md:border-r-floating flex flex-col justify-center">
-          <div className="bg-[#74836f]/40 text-brand-ink p-[2.2rem_1.8rem] md:p-[3rem_2.6rem] h-full flex flex-col">
-            <span className="text-[0.72rem] tracking-[0.2em] uppercase font-semibold mb-[1rem] block text-brand-ink">Book Now</span>
+          <div className="bg-[#6B3E26] text-brand-cream p-[2.2rem_1.8rem] md:p-[3rem_2.6rem] h-full flex flex-col">
+            <span className="text-[0.72rem] tracking-[0.2em] uppercase font-semibold mb-[1rem] block text-brand-cream/70">Book Now</span>
           <TextReveal className="font-serif font-medium italic text-[clamp(2.2rem,5vw,3.6rem)] leading-[1.02] mb-[1.4rem]">
             The Signatures
           </TextReveal>
           <BlockReveal delay={0.2}>
-            <p className="font-serif text-[1.05rem] leading-[1.75] max-w-[52ch] text-[rgba(36,26,20,0.85)]">
-              <span className="inline-block align-bottom font-serif font-bold text-[3rem] leading-none pt-[0.1em] pb-[0.05em] px-[0.15em] text-[#74836f] bg-brand-ink mr-[0.1em]">A</span>
-              s our name suggests, our signature French toast remains the heart of our menu—from sweet Strawberry & Banoffee to our savory Gouda & Garlic Mushroom. But the exploration doesn't stop there. We are loved for our perfectly textured French Omelettes, Tuna in Olive Sourdough sandwiches, comforting Penne Alfredo, and our famous Burnt Basque Cheesecake paired with a cappuccino.
+            <p className="font-serif text-[1.05rem] leading-[1.75] max-w-[52ch] text-brand-cream/90">
+              <span className="inline-block align-bottom font-serif font-bold text-[3rem] leading-none pt-[0.1em] pb-[0.05em] px-[0.15em] text-[#6B3E26] bg-brand-cream mr-[0.1em]">A</span>
+              t Summer Town, we bring you vibrant, flavorful Continental and Italian cuisine. Our menu specializes in premium quality comfort food. We are loved for our perfectly baked Cheesy BBQ Chicken Pizzas, refreshing Grilled Chicken Caesar Salads, and our expertly handcrafted coffee paired with a beautiful vintage aesthetic.
             </p>
           </BlockReveal>
-          <a className="inline-flex items-center gap-[0.6rem] mt-auto self-start text-[0.76rem] tracking-[0.16em] uppercase font-semibold bg-brand-ink text-brand-cream px-[1.6rem] py-[0.85rem] rounded-full hover:bg-brand-cream hover:text-brand-ink transition-transform duration-300 ease-[cubic-bezier(0.25,1,0.5,1)]" href="#">
+          <a className="inline-flex items-center gap-[0.6rem] mt-auto self-start text-[0.76rem] tracking-[0.16em] uppercase font-semibold bg-brand-cream text-[#6B3E26] px-[1.6rem] py-[0.85rem] rounded-full hover:bg-brand-ink hover:text-brand-cream transition-transform duration-300 ease-[cubic-bezier(0.25,1,0.5,1)]" href="#">
             View Menu →
           </a>
           </div>
@@ -125,10 +107,10 @@ export default function Home() {
             <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=800" alt="Fresh bread" className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105" />
           </div>
           <div className="p-[1.6rem_2rem_2.2rem]">
-            <TextReveal className="font-serif italic font-medium text-[1.3rem] text-brand-red">Artisan Sourdough</TextReveal>
+            <TextReveal className="font-serif italic font-medium text-[1.3rem] text-brand-red">Handcrafted Pizzas</TextReveal>
             <BlockReveal delay={0.1}>
               <p className="font-serif text-brand-ink-soft mt-2 text-[0.95rem] leading-[1.6]">
-                Baked fresh every single morning at our Kacheripady studio. Slow-fermented for that unmistakable tangy crust and soft, airy interior.
+                Baked fresh to order with premium quality toppings. From classic Margheritas to our signature BBQ Chicken, every slice is packed with flavor.
               </p>
             </BlockReveal>
           </div>
@@ -144,18 +126,18 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1000px] mx-auto">
           <BlockReveal delay={0.1} className="text-center p-8 border-2 border-brand-line flex flex-col items-center">
             <h4 className="font-serif font-semibold text-xl text-brand-ink mb-2">Panampilly Nagar</h4>
-            <p className="text-brand-ink-soft text-[0.95rem] leading-[1.6] font-serif mb-6 flex-1">Our long-standing neighborhood favorite. Cozy, leafy, and perfect for brunch.</p>
+            <p className="text-brand-ink-soft text-[0.95rem] leading-[1.6] font-serif mb-6 flex-1">Our flagship location. A cozy, vintage aesthetic perfect for casual hangouts and great food.</p>
             <a href="#" className="text-brand-red text-xs uppercase tracking-widest font-semibold border-b-2 border-2-brand-red pb-1 hover:text-brand-ink hover:border-2-brand-ink transition-colors">Get Directions</a>
           </BlockReveal>
           <BlockReveal delay={0.2} className="text-center p-8 border-2 border-brand-line flex flex-col items-center">
-            <h4 className="font-serif font-semibold text-xl text-brand-ink mb-2">Fort Kochi</h4>
-            <p className="text-brand-ink-soft text-[0.95rem] leading-[1.6] font-serif mb-6 flex-1">Located on St. Francis Church Road. A charming heritage spot for dates. Booking recommended!</p>
-            <a href="#" className="text-brand-red text-xs uppercase tracking-widest font-semibold border-b-2 border-2-brand-red pb-1 hover:text-brand-ink hover:border-2-brand-ink transition-colors">Get Directions</a>
+            <h4 className="font-serif font-semibold text-xl text-brand-ink mb-2">Opening Hours</h4>
+            <p className="text-brand-ink-soft text-[0.95rem] leading-[1.6] font-serif mb-6 flex-1">We are open daily from 12:00 PM to Midnight. Perfect for late-night cravings!</p>
+            <a href="#" className="text-brand-red text-xs uppercase tracking-widest font-semibold border-b-2 border-2-brand-red pb-1 hover:text-brand-ink hover:border-2-brand-ink transition-colors">View Menu</a>
           </BlockReveal>
           <BlockReveal delay={0.3} className="text-center p-8 border-2 border-brand-line flex flex-col items-center">
-            <h4 className="font-serif font-semibold text-xl text-brand-ink mb-2">Kacheripady</h4>
-            <p className="text-brand-ink-soft text-[0.95rem] leading-[1.6] font-serif mb-6 flex-1">The Bakery, Kitchen & Studio. Where the baking magic and recipe creation happens daily.</p>
-            <a href="#" className="text-brand-red text-xs uppercase tracking-widest font-semibold border-b-2 border-2-brand-red pb-1 hover:text-brand-ink hover:border-2-brand-ink transition-colors">Get Directions</a>
+            <h4 className="font-serif font-semibold text-xl text-brand-ink mb-2">Parking</h4>
+            <p className="text-brand-ink-soft text-[0.95rem] leading-[1.6] font-serif mb-6 flex-1">Limited parking is available directly in front of the cafe. Arrive early on weekends!</p>
+            <a href="#reserve" className="text-brand-red text-xs uppercase tracking-widest font-semibold border-b-2 border-2-brand-red pb-1 hover:text-brand-ink hover:border-2-brand-ink transition-colors">Reserve a Table</a>
           </BlockReveal>
         </div>
       </section>
@@ -163,14 +145,14 @@ export default function Home() {
       {/* NEW SECTION: Whole Cakes / Shop */}
       <section id="shop" className="border-b-floating">
         <div className="p-[3.4rem_2.6rem_1.4rem] border-b-floating">
-          <span className="text-[0.72rem] tracking-[0.2em] uppercase text-brand-red font-semibold mb-[1rem] block">Pre-Order</span>
+          <span className="text-[0.72rem] tracking-[0.2em] uppercase text-brand-red font-semibold mb-[1rem] block">Taste the Best</span>
           <TextReveal className="font-serif font-medium italic text-[clamp(2.2rem,5vw,3.6rem)] leading-[1.02] mb-[0.4rem] text-brand-ink">
-            Whole Cakes
+            Signature Menu
           </TextReveal>
           <BlockReveal delay={0.2}>
             <p className="font-serif text-[1.05rem] leading-[1.75] text-brand-ink-soft max-w-[60ch]">
               <span className="inline-block align-bottom font-serif font-bold text-[3rem] leading-none pt-[0.1em] pb-[0.05em] px-[0.15em] text-brand-cream bg-brand-red mr-[0.1em]">C</span>
-              elebrate with our signature bakes at home. From our legendary Burnt Basque Cheesecake to our light and airy Chiffon Cakes, everything is baked fresh to order at our Kacheripady studio. 
+              ome experience the best Continental cuisine in Kochi. From our legendary Cheesy BBQ Chicken Pizzas to our refreshing Caesar Salads, everything is prepared fresh with premium ingredients.
             </p>
           </BlockReveal>
         </div>
@@ -214,7 +196,7 @@ export default function Home() {
         <BlockReveal delay={0.2}>
           <p className="font-serif text-[1.05rem] leading-[1.75] text-brand-ink-soft max-w-[56ch] mb-8">
             <span className="inline-block align-bottom font-serif font-bold text-[3rem] leading-none pt-[0.1em] pb-[0.05em] px-[0.15em] text-brand-cream bg-brand-red mr-[0.1em]">W</span>
-            hether it's a bustling weekend brunch at Panampilly Nagar or a quiet heritage date in Fort Kochi, our tables fill up fast. Reserve your spot below and we'll have the coffee brewing.
+            hether it's a bustling weekend dinner at Panampilly Nagar or a quiet afternoon coffee date, our tables fill up fast. Reserve your spot below and we'll have your favorites ready.
           </p>
         </BlockReveal>
         
@@ -237,40 +219,6 @@ export default function Home() {
         </form>
       </section>
 
-      <footer className="bg-brand-ink text-brand-cream p-[3.4rem_2.6rem_1.8rem]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2rem]">
-          <div>
-            <div className="font-serif text-[1.4rem] italic mb-[0.8rem]">French Toast</div>
-            <p className="text-[rgba(251,246,236,0.6)] text-[0.85rem] leading-[1.6] max-w-[32ch]">
-              A perfect spot for dates and casual hangouts with a European-style vibe.
-            </p>
-          </div>
-          <div className="flex flex-col">
-            <div className="text-[0.7rem] tracking-[0.18em] uppercase text-brand-red mb-[0.9rem]">Pages</div>
-            {["Home", "Menu", "Reservation", "About"].map(link => (
-              <a key={link} href={`#${link.toLowerCase()}`} className="block text-[rgba(251,246,236,0.75)] text-[0.88rem] py-[0.25rem] hover:text-brand-cream transition-colors">
-                {link}
-              </a>
-            ))}
-          </div>
-          <div className="flex flex-col">
-            <div className="text-[0.7rem] tracking-[0.18em] uppercase text-brand-red mb-[0.9rem]">Socials</div>
-            {["Instagram", "Facebook", "Pinterest"].map(link => (
-              <a key={link} href="#" className="block text-[rgba(251,246,236,0.75)] text-[0.88rem] py-[0.25rem] hover:text-brand-cream transition-colors">
-                {link}
-              </a>
-            ))}
-          </div>
-          <div className="flex flex-col">
-            <div className="text-[0.7rem] tracking-[0.18em] uppercase text-brand-red mb-[0.9rem]">Main Address</div>
-            <span className="text-[rgba(251,246,236,0.75)] text-[0.88rem]">Panampilly Nagar<br/>Kochi, Kerala</span>
-          </div>
-        </div>
-        <div className="mt-[2.6rem] pt-[1.4rem] border-t-2 border-2-[rgba(251,246,236,0.15)] flex justify-between flex-wrap gap-[0.6rem] text-[0.72rem] text-[rgba(251,246,236,0.45)] tracking-[0.04em]">
-          <span>© 2026 French Toast Kochi. All rights reserved.</span>
-          <span>Editorial layout clone</span>
-        </div>
-      </footer>
     </div>
   );
 }

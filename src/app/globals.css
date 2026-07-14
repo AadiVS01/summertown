@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-cream: #fff4e9;
-  --color-brand-cream-2: #e7d8c9;
-  --color-brand-red: #6b5a48; /* Accent/Buttons */
-  --color-brand-red-deep: #879183; /* Menu Background */
-  --color-brand-ink: #241A14;
-  --color-brand-ink-soft: #6b5a48;
-  --color-brand-line: #9eab9a; /* Borders */
+  --color-brand-cream: #e7a9a8;
+  --color-brand-cream-2: #fbffc0;
+  --color-brand-red: #6B3E26; /* Accent/Buttons */
+  --color-brand-red-deep: #6B3E26; /* Menu Background */
+  --color-brand-ink: #4b3832;
+  --color-brand-ink-soft: #be9b7b;
+  --color-brand-line: #6B3E26; /* Borders */
   
   --font-serif: var(--font-playfair);
   --font-body: var(--font-crimson);
@@ -44,21 +44,21 @@ body.menu-open {
 @layer utilities {
   /* Floating Borders */
   .border-b-floating { position: relative; }
-  .border-b-floating::after {
+.border-b-floating::after {
     content: ''; position: absolute; bottom: 0; left: 4vw; right: 4vw; height: 2px;
-    background-color: #74836f; pointer-events: none; z-index: 10;
+    background-color: var(--color-brand-line); pointer-events: none; z-index: 10;
   }
   
   .border-t-floating { position: relative; }
   .border-t-floating::after {
     content: ''; position: absolute; top: 0; left: 4vw; right: 4vw; height: 2px;
-    background-color: #74836f; pointer-events: none; z-index: 10;
+    background-color: var(--color-brand-line); pointer-events: none; z-index: 10;
   }
   
   .border-r-floating { position: relative; }
   .border-r-floating::after {
     content: ''; position: absolute; right: 0; top: 4vw; bottom: 4vw; width: 2px;
-    background-color: #74836f; pointer-events: none; z-index: 10;
+    background-color: var(--color-brand-line); pointer-events: none; z-index: 10;
   }
 
   .border-b-0-floating::after { display: none !important; }
