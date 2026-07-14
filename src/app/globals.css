@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-cream: #e7a9a8;
+  --color-brand-cream: #fff4e9;
   --color-brand-cream-2: #fbffc0;
   --color-brand-red: #6B3E26; /* Accent/Buttons */
   --color-brand-red-deep: #6B3E26; /* Menu Background */

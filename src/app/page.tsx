@@ -47,7 +47,7 @@ export default function Home() {
           Experience our vintage aesthetic and cozy, charming European-style atmosphere. The perfect laid-back spot for deep conversations, casual hangouts, and premium continental dining in Kochi.
         </TextReveal>
         <div className="mt-[2.6rem] mx-auto max-w-[920px] overflow-hidden border-2 border-brand-line relative bg-brand-cream-2/50">
-          <img src="/hero.png?v=1" alt="French Toast Bakery & Kitchen" className="w-full h-auto block" />
+          <img src="/hero.png?v=1" alt="Summertown Cafe" className="w-full h-auto block" />
         </div>
       </header>
 
